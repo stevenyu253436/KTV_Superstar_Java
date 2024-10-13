@@ -11,11 +11,14 @@ import static org.example.app.MessageUtils.getMessage;
 
 import org.apache.commons.text.WordUtils;
 
+import javax.swing.JFrame;
+
 public class App {
     public static void main(String[] args) {
-        LinkedList tokens;
-        tokens = split(getMessage());
-        String result = join(tokens);
-        System.out.println(WordUtils.capitalize(result));
+        // 創建一個 JFrame 窗口
+        JFrame frame = new JFrame("KTV Superstar");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(800, 600); // 設置窗體大小
+        frame.setVisible(true);  // 顯示窗體
     }
 }
